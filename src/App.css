@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.encabezado-app {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.encabezado-app h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Mensajes */
+.mensaje {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje.exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Sección de agregar contacto */
+.seccion-agregar-contacto {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.seccion-agregar-contacto h2 {
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-formulario input {
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.grupo-formulario input:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.boton-enviar {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-enviar:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.boton-enviar:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Sección de lista de contactos */
+.seccion-contactos {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.encabezado-contactos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.encabezado-contactos h2 {
+  color: #34495e;
+  margin: 0;
+}
+
+.boton-actualizar {
+  background-color: #27ae60;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-actualizar:hover:not(:disabled) {
+  background-color: #219a52;
+}
+
+.boton-actualizar:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Lista de contactos */
+.lista-contactos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-contacto {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-contacto:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nombre-contacto {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.telefono-contacto {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+/* Estados especiales */
+.cargando, .sin-contactos {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+  
+  .encabezado-contactos {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .info-contacto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .encabezado-app h1 {
+    font-size: 2rem;
+  }
+}
